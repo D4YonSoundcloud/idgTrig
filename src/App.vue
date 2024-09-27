@@ -100,9 +100,10 @@ nav {
   color: #59e8ed;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   nav {
     text-align: left;
+    height: auto;
     font-size: 1rem;
   }
 }

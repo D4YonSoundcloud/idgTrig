@@ -139,7 +139,7 @@ function navigateToSublesson(id: string) {
       <div class="visualization-wrapper">
         <div ref="containerRef" class="visualization-container"></div>
       </div>
-      <div v-if="sublesson.sliders" class="sliders-container">
+      <div v-if="sublesson.sliders" ref="slidersRef" class="sliders-container">
         <div v-for="slider in sublesson.sliders" :key="slider.id" class="slider-item">
           <label :for="slider.id">{{ slider.label }}</label>
           <input
@@ -161,36 +161,36 @@ function navigateToSublesson(id: string) {
 
 <style scoped>
 .lesson-view {
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   color: var(--color-text);
 }
 
 h1 {
   color: var(--color-h1-text);
-  font-size: 2.25rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: -1.5px;
-}
-
-h2 {
-  color: var(--color-heading);
-  font-size: 1.8rem;
-  margin-top: 2rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   letter-spacing: -1px;
 }
 
+h2 {
+  color: var(--color-heading);
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
 .lesson-introduction {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .sublesson-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .sublesson-nav button {
@@ -201,6 +201,7 @@ h2 {
   color: var(--color-text);
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
+  font-size: 0.9rem;
 }
 
 .sublesson-nav button.active,
@@ -213,13 +214,13 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .visualization-container {
   width: 100%;
   max-width: 600px;
-  height: 600px;
+  height: 500px;
   background-color: var(--color-background-soft);
   border-radius: 8px;
 }
@@ -228,10 +229,11 @@ h2 {
   background-color: var(--color-background-soft);
   border-radius: 8px;
   padding: 1rem;
+  margin-top: 1rem;
 }
 
 .slider-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .slider-item label {
@@ -279,26 +281,36 @@ h2 {
   font-size: 0.9rem;
   color: var(--color-text-light);
 }
-</style>
 
-<style>
-/* Global styles for lesson content */
-.lesson-content h2 {
-  color: var(--color-heading);
-  font-size: 1.6rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-}
+@media (max-width: 768px) {
+  .lesson-view {
+    padding: 0.5rem;
+  }
 
-.lesson-content p, .lesson-content ul {
-  margin-bottom: 1rem;
-}
+  h1 {
+    font-size: 1.5rem;
+  }
 
-.lesson-content ul {
-  padding-left: 1.5rem;
-}
+  h2 {
+    font-size: 1.3rem;
+  }
 
-.lesson-content li {
-  margin-bottom: 0.5rem;
+  .sublesson-nav button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .visualization-container {
+    height: 600px;
+    width: 500px;
+  }
+
+  .slider-item label {
+    font-size: 0.9rem;
+  }
+
+  .slider-explanation {
+    font-size: 0.8rem;
+  }
 }
 </style>
