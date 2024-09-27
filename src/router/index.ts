@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LessonView from "../views/LessonView.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory('/idgTrig'),
   routes: [
     {
       path: '/',

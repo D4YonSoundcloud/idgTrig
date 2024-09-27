@@ -6225,7 +6225,6 @@ export function setupLessons() {
     lessonStore.addLesson(trigIdentitiesLesson)
     lessonStore.addLesson(trigEquationsLesson)
     lessonStore.addLesson(trigApplicationsLesson)
-    lessonStore.addLesson(trigApplicationsLesson)
     lessonStore.addLesson(polarComplexLesson)
     lessonStore.addLesson(threeDTrigVectorsLesson)
     lessonStore.addLesson(parametricEquationsLesson)

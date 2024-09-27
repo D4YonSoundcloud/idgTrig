@@ -284,7 +284,7 @@ h2 {
 
 @media (max-width: 768px) {
   .lesson-view {
-    padding: 0.5rem;
+    max-width: 95%;
   }
 
   h1 {
@@ -302,7 +302,7 @@ h2 {
 
   .visualization-container {
     height: 600px;
-    width: 500px;
+    width: 300px;
   }
 
   .slider-item label {
