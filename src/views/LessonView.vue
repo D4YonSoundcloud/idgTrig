@@ -220,7 +220,7 @@ h2 {
 .visualization-container {
   width: 100%;
   max-width: 600px;
-  height: 500px;
+  height: 600px;
   background-color: var(--color-background-soft);
   border-radius: 8px;
 }
@@ -284,7 +284,7 @@ h2 {
 
 @media (max-width: 768px) {
   .lesson-view {
-    max-width: 95%;
+    max-width: 99%;
   }
 
   h1 {
@@ -302,7 +302,7 @@ h2 {
 
   .visualization-container {
     height: 600px;
-    width: 300px;
+    width: 425px;
   }
 
   .slider-item label {

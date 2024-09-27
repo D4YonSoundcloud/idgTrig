@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LessonView from "../views/LessonView.vue";
 
 const router = createRouter({
-  history: createWebHistory('/idgTrig'),
+  history: createWebHistory('/idgTrig/'),
   routes: [
     {
       path: '/',
