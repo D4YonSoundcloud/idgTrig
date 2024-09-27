@@ -1,0 +1,57 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(178, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 0 2rem;
+  }
+}
+
+/* Global styles for typography */
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+  Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; margin-bottom: 1.5rem; letter-spacing: -1.5px }
+h2 { font-size: 2rem; margin-top: 2rem; margin-bottom: 1rem; letter-spacing: -1px;}
+h3 { font-size: 1.75rem; margin-top: 1.75rem; margin-bottom: 0.75rem; letter-spacing: -0.5px}
+h4 { font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 0.5rem; letter-spacing: -0.25px}
+
+p, ul, ol { margin-bottom: 1rem; }
+
+strong { font-weight: 600; }
+
+/* Add more global styles as needed */
